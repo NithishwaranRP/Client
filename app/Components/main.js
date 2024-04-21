@@ -1,6 +1,3 @@
-"use client"
-
-
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -17,10 +14,11 @@ const Main = () => {
     const options = ["Company", "Next Gen", "Author Details"];
 
     const optionContent = [
-        { text: "Necxis is IT company which located in New Delhi.", imageSrc: "Assets/necxis.png" },
-        { text: "Next Generation is Our upcoming social connect app which is unique from overall.", imageSrc: "Assets/NewGensvg1.svg" },
-        { text: "I am Nithishwaran RP, you can call me RPN - FullStack Developer || Designer.", imageSrc: "Assets/dev.png" }
+        { text: "Necxis is IT company which located in New Delhi.", imageSrc: "/Assets/necxis.png" },
+        { text: "Next Generation is Our upcoming social connect app which is unique from overall.", imageSrc: "/Assets/NewGensvg1.svg" },
+        { text: "I am Nithishwaran RP, you can call me RPN - FullStack Developer || Designer.", imageSrc: "/Assets/dev.png" }
     ];
+
     useEffect(() => {
         const intervalId = setInterval(() => {
             const nextIndex = (selectedOption + 1) % options.length;
@@ -78,7 +76,7 @@ const Main = () => {
             <header className="flex justify-between items-center p-4 bg-gray-100 shadow">
                 <div className="relative dark:drop-shadow-[0_0_0.3rem_white]">
                     <Image
-                        src="Assets/NewGensvg2.svg"
+                        src="/Assets/NewGensvg2.svg"
                         alt="Next.js Logo"
                         width={150}
                         height={80}
@@ -118,7 +116,7 @@ const Main = () => {
                                 exit={{ scale: 0 }}
                             >
                                 <Image
-                                    src="newgen.gif"
+                                    src="/Assets/newgen.gif"
                                     alt="Next.js Logo"
                                     width={280}
                                     height={80}
@@ -170,12 +168,8 @@ const Main = () => {
                             </motion.div>
                         )}
                     </AnimatePresence>
-
-
                 </div>
-
             </main>
-
             <footer className="flex justify-center items-center p-4 bg-gray-100 shadow mt-auto">
                 <p>nithishnt2002@gmail.com | +91 9751448561 | Chennai</p>
             </footer>
