@@ -1,0 +1,86 @@
+/* styles.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define styles for active option */
+.active-option {
+  color: #000;
+  border-width: 2px;
+  border-color: #000000;
+}
+
+/* Define gradient background based on body background */
+body {
+  background: linear-gradient(to bottom, var(--body-background), #FFFFFF);
+}
+
+/* Define styles for the main content */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  min-height: 100vh;
+}
+
+/* Styles for the logo */
+.logo {
+  position: relative;
+}
+
+/* Styles for the author information */
+.author-info {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to top, white, black);
+  color: white;
+}
+
+/* Styles for options */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.option-button {
+  padding: 8px 16px;
+  margin: 8px;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+.option-button:hover {
+  background-color: #6c63ff;
+}
+
+/* Styles for option content */
+.option-content {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  padding: 16px;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.option-content img {
+  margin-right: 16px;
+}
+
+/* Styles for author information */
+.author-info-text {
+  margin-bottom: 32px;
+}
